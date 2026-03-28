@@ -1,34 +1,191 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Sofia Ratto - Prototipos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sofia Ratto | Mi Tiempo en Pantalla - Prototipos</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-light: #3b82f6;
+            --text: #1f2937;
+            --text-light: #4b5563;
+            --bg: #f8fafc;
+            --card: #ffffff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            font-weight: 400;
+        }
+        
+        main {
+            padding: 4rem 0;
+        }
+        
+        section {
+            margin-bottom: 5rem;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            border-bottom: 3px solid #e2e8f0;
+            padding-bottom: 0.8rem;
+        }
+        
+        .description {
+            font-size: 1.15rem;
+            color: var(--text-light);
+            max-width: 800px;
+            margin-bottom: 2rem;
+        }
+        
+        .viz-container {
+            background: var(--card);
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+        
+        .svg-container {
+            width: 100%;
+            min-height: 500px;
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .flourish-container {
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .note {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            font-style: italic;
+            background: #f1f5f9;
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+    </style>
 </head>
 <body>
-    <h1>
-        Mi tiempo en pantalla - Prototipos
-    </h1>
-    <p>
-        En esta sección se pueden encontrar los prototipos de las distintas partes del proyecto.
-    </p>
+    <header>
+        <div class="container">
+            <h1>Mi Tiempo en Pantalla</h1>
+            <p class="subtitle">Análisis y visualización de mi uso de dispositivos • Prototipos</p>
+        </div>
+    </header>
 
-    <h2>
-        Por categoria por dispositivo
-    </h2>
-    <p>En este grafico podemos ver que la mayor cantidad de tiempo, la paso en el celular,
-        y que lo que mas utilizo en el mismo es lo social. por otro lado, en la compu paso la mayor
-        cantidad del tiempo en aplicaciones de programacion. En el ipad, la mayor parte de tiempo la paso
-        en aplicaciones relacionadas con la educacion</p>
-    <object type="image/svg+xml" data="https://sratto0.github.io/infovis/prototipos/prototipo_raw_graph.svg"></object>
+    <main class="container">
+        <section>
+            <h2>Introducción</h2>
+            <p class="description">
+                En esta sección se presentan los prototipos de las distintas visualizaciones del proyecto. 
+                El objetivo es explorar y comunicar de forma clara cómo distribuyo mi tiempo entre dispositivos y categorías de uso.
+            </p>
+        </section>
 
-    <h2>
-        A traves de los dias
-    </h2>
-    <p>En este slideshow se puede ver como van cambiando las categorias predominantes en el paso de los dias,
-        aunque en la mayoria de los dias la categoria "Social" es en la que mas tiempo suelo pasar.</p>
-    <h5>Nota: Este slideshow es para los tiempos en conjunto de los 3 dispositivos</h5>
+        <section>
+            <h2>Por Categoría y por Dispositivo</h2>
+            <p class="description">
+                En este gráfico observamos que la mayor parte de mi tiempo en pantalla se concentra en el celular, 
+                donde predomina el uso de aplicaciones sociales. En la computadora, el tiempo se destina principalmente 
+                a herramientas de programación, mientras que en el iPad predomina el contenido educativo.
+            </p>
+            
+            <div class="viz-container">
+                <div class="svg-container">
+                    <object type="image/svg+xml" 
+                            data="https://sratto0.github.io/infovis/prototipos/prototipo_raw_graph.svg" 
+                            width="100%" 
+                            height="100%" 
+                            aria-label="Gráfico de tiempo en pantalla por dispositivo y categoría">
+                    </object>
+                </div>
+            </div>
+        </section>
 
-    <div class="flourish-embed flourish-chart" data-src="visualisation/28274202"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/28274202/thumbnail" width="100%" alt="visualization" /></noscript></div>
+        <section>
+            <h2>A Través de los Días</h2>
+            <p class="description">
+                Este slideshow muestra cómo varían las categorías predominantes a lo largo de la semana. 
+                Aunque "Social" suele ser la categoría con mayor uso la mayoría de los días, se observan patrones interesantes 
+                según el día de la semana.
+            </p>
+            
+            <div class="note">
+                <strong>Nota:</strong> Este análisis considera el tiempo combinado de los tres dispositivos (celular, computadora e iPad).
+            </div>
+            
+            <div class="viz-container flourish-container">
+                <div class="flourish-embed flourish-chart" data-src="visualisation/28274202">
+                    <script src="https://public.flourish.studio/resources/embed.js"></script>
+                    <noscript>
+                        <img src="https://public.flourish.studio/visualisation/28274202/thumbnail" 
+                             width="100%" 
+                             alt="Visualización de tiempo en pantalla a través de los días">
+                    </noscript>
+                </div>
+            </div>
+        </section>
+    </main>
 
+    <footer>
+        <div class="container">
+            <p>Prototipos • Proyecto de Visualización de Información • Sofia Ratto</p>
+            <p style="margin-top: 0.5rem;">2026 1C</p>
+        </div>
+    </footer>
 </body>
