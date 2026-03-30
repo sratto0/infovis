@@ -1,25 +1,240 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Sofia Ratto - Prototipos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sofia Ratto | Mi Tiempo en Pantalla - Prototipos</title>
+    <style>
+        :root {
+            --primary: #1e40af;
+            --primary-light: #3b82f6;
+            --text: #1f2937;
+            --text-light: #4b5563;
+            --bg: #f1f5f9;
+            --card: #ffffff;
+            --border: #e2e8f0;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+        
+        h1 { font-size: 3rem; font-weight: 700; margin-bottom: 0.5rem; letter-spacing: -0.5px; }
+        
+        .subtitle { font-size: 1.2rem; opacity: 0.9; font-weight: 400; }
+        
+        main { padding: 3rem 0; }
+        
+        section {
+            margin-bottom: 4rem;
+            background: var(--card);
+            padding: 2.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 0.5rem;
+        }
+        
+        .description { font-size: 1.1rem; color: var(--text-light); margin-bottom: 2rem; }
+        
+        .viz-container { background: #ffffff; border-radius: 8px; margin-bottom: 1.5rem; }
+        
+        .svg-container {
+            width: 100%;
+            min-height: 350px;
+            background: #fafafa;
+            border-radius: 8px;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--border);
+            flex-direction: column;
+        }
+        
+        .analysis-text {
+            font-size: 1rem;
+            color: var(--text-light);
+            margin-top: 1.5rem;
+            line-height: 1.5;
+            padding: 0 0.5rem;
+        }
+
+        .note {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            background: #eff6ff;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-light);
+            margin-bottom: 2rem;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .comparison-card {
+            background: white;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .comparison-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 4rem 0;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border);
+        }
+    </style>
 </head>
 <body>
-    <h1>
-        Mi tiempo en pantalla - Prototipos
-    </h1>
-    <p>
-        En esta sección se pueden encontrar los prototipos de las distintas partes del proyecto.
+
+<header>
+    <div class="container">
+        <h1>Mi Tiempo en Pantalla</h1>
+        <p class="subtitle">Análisis y visualización de mi uso de dispositivos • Prototipos</p>
+    </div>
+</header>
+
+<main class="container">
+
+<section>
+    <h2>Introducción</h2>
+    <p class="description">
+        Esta sección presenta los prototipos de visualización desarrollados para el proyecto. El objetivo es analizar y comunicar de forma estructurada cómo se distribuye mi tiempo entre los diferentes dispositivos y categorías de uso diario.
+    </p>
+</section>
+
+<section>
+    <h2>Por Categoría y por Dispositivo</h2>
+    <p class="description">
+        En este gráfico se observa la especialización de cada plataforma. Cada dispositivo cumple una función predominante y distinta dentro de mi rutina.
+    </p>
+    
+    <div class="viz-container">
+        <div class="svg-container">
+            <object type="image/svg+xml" 
+                    data="https://sratto0.github.io/infovis/prototipos/prototipo_raw_graph.svg" 
+                    width="100%" 
+                    height="100%">
+            </object>
+        </div>
+    </div>
+    <p class="analysis-text">
+        El <strong>celular</strong> registra el mayor volumen de uso, vinculado principalmente a redes sociales. Por otro lado, la <strong>computadora</strong> se consolida como la herramienta central para tareas de programación, mientras que el <strong>iPad</strong> se utiliza mayoritariamente para el consumo de contenidos educativos y académicos.
+    </p>
+</section>
+
+<section>
+    <h2>A Través de los Días</h2>
+    <p class="description">
+        Esta visualización interactiva permite observar cómo varían mis prioridades y el tipo de contenido consumido en el transcurso de los días.
+    </p>
+    
+    <div class="note">
+        <strong>Nota:</strong> Se considera el tiempo combinado de los tres dispositivos para obtener una visión integral del comportamiento digital diario.
+    </div>
+    
+    <div class="viz-container">
+        <div class="flourish-embed" data-src="visualisation/28274202">
+            <script src="https://public.flourish.studio/resources/embed.js"></script>
+        </div>
+    </div>
+    <p class="analysis-text">
+        Se identifica un cambio de patrón significativo según el día: mientras que de lunes a viernes predomina el uso de aplicaciones de estudio y trabajo, el fin de semana el tiempo se desplaza hacia el ocio y el entretenimiento, modificando por completo la jerarquía de las aplicaciones más utilizadas.
+    </p>
+</section>
+
+<section>
+    <h2>Comparaciones entre dispositivos</h2>
+    <p class="description">
+        Se presentan comparaciones directas entre dispositivos para entender mejor las diferencias de uso y la transición entre las actividades personales y las académicas.
     </p>
 
-    <h2>
-        Mi tiempo por categoria por dispositivo
-    </h2>
-    <p>En este grafico podemos ver que la mayor cantidad de tiempo, la paso en el celular,
-        y que lo que mas utilizo en el mismo es lo social. por otro lado, en la compu paso la mayor
-        cantidad del tiempo en aplicaciones de programacion. En el ipad, la mayor parte de tiempo la paso
-        en aplicaciones relacionadas con la educacion</p>
-    <object type="image/svg+xml" data="https://sratto0.github.io/infovis/prototipos/prototipo_raw_graph.svg"></object>
+    <div class="comparison-grid">
+
+        <div class="comparison-card">
+            <div class="comparison-title">Celular vs iPad</div>
+            <p class="analysis-text" style="margin-top: 0; margin-bottom: 1rem;">
+                Esta comparativa evidencia la diferencia entre el consumo rápido de información en el celular y las sesiones de estudio más prolongadas y enfocadas en el iPad.
+            </p>
+            <div class="svg-container">
+                <div style="width:100%; min-height:254px" id="datawrapper-vis-5NDif">
+                    <script defer src="https://datawrapper.dwcdn.net/5NDif/embed.js"></script>
+                </div>
+            </div>
+        </div>
+
+        <div class="comparison-card">
+            <div class="comparison-title">Celular vs Computadora</div>
+            <p class="analysis-text" style="margin-top: 0; margin-bottom: 1rem;">
+                Se observa una clara distinción de roles: el celular actúa como el centro de interacción social, mientras que la computadora es el entorno destinado a la producción técnica y programación.
+            </p>
+            <div class="svg-container">
+                <div style="width:100%; min-height:254px" id="datawrapper-vis-inG4e">
+                    <script defer src="https://datawrapper.dwcdn.net/inG4e/embed.js"></script>
+                </div>
+            </div>
+        </div>
+
+        <div class="comparison-card">
+            <div class="comparison-title">iPad vs Computadora</div>
+            <p class="analysis-text" style="margin-top: 0; margin-bottom: 1rem;">
+                A diferencia de los otros pares, aquí se comparan dos herramientas de trabajo. Se analiza cómo el iPad se orienta a la investigación teórica mientras la computadora se enfoca en la ejecución práctica.
+            </p>
+            <div class="svg-container">
+                <div style="width:100%; min-height:199px" id="datawrapper-vis-3nc7J">
+                    <script defer src="https://datawrapper.dwcdn.net/3nc7J/embed.js"></script>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <div class="container">
+        <p>Prototipos • Proyecto de Visualización de Información • Sofia Ratto</p>
+        <p style="margin-top: 0.5rem;">2026 1C</p>
+    </div>
+</footer>
 
 </body>
