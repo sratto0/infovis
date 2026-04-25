@@ -6,13 +6,15 @@
     <title>Sofia Ratto | Mi Tiempo en Pantalla</title>
     <style>
         :root {
-            --primary: #1e40af;
-            --primary-light: #3b82f6;
-            --text: #1f2937;
-            --text-light: #4b5563;
-            --bg: #f1f5f9;
+            --primary: #0f172a;       
+            --primary-accent: #3b82f6; 
+            --secondary: #6366f1;     
+            --text: #1e293b;
+            --text-light: #64748b;
+            --bg: #f8fafc;             
             --card: #ffffff;
-            --border: #e2e8f0;
+            --border: #f1f5f9;
+            --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
         }
         
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -25,11 +27,12 @@
         }
         
         header {
-            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            background: var(--primary);
+            background-image: radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.2) 0, transparent 50%), 
+                              radial-gradient(at 50% 0%, rgba(99, 102, 241, 0.2) 0, transparent 50%);
             color: white;
-            padding: 4rem 0;
+            padding: 6rem 0;
             text-align: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
         
         .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
@@ -122,13 +125,17 @@
             border-top: 1px solid var(--border);
         }
         .insight {
-            background: #111827;
+            background: var(--primary);
+            background-image: radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.2) 0, transparent 50%), 
+                            radial-gradient(at 50% 0%, rgba(99, 102, 241, 0.2) 0, transparent 50%);
             color: white;
-            padding: 1.2rem;
-            border-radius: 10px;
-            margin-top: 1.5rem;
-            font-weight: 500;
+            padding: 1rem 0;
+            text-align: center;
+            border-radius: 14px;
         }
+
+
+
 
     </style>
 </head>
@@ -162,7 +169,7 @@
         <div class="svg-container">
             <object 
                 type="image/svg+xml" 
-                data="https://sratto0.github.io/infovis/prototipos/prototipo_rawgraph.svg" 
+                data="https://sratto0.github.io/infovis/tp_infovis/prototipo_rawgraph.svg" 
                 width="100%" 
                 style="height: 600px;">
             </object>
@@ -202,6 +209,10 @@
         <div style="min-height:368px" id="datawrapper-vis-nIwbd"><script type="text/javascript" defer src="https://datawrapper.dwcdn.net/nIwbd/embed.js" charset="utf-8" data-target="#datawrapper-vis-nIwbd"></script><noscript><img src="https://datawrapper.dwcdn.net/nIwbd/full.png" alt="Stacked Bars" /></noscript></div>
     </div>
 
+    <div class="insight">
+        Las diferencias entre dispositivos reflejan una transición clara entre contextos: el uso personal y de entretenimiento se concentra en dispositivos móviles, mientras que las actividades académicas y estructuradas se desplazan hacia la computadora, reforzando su rol como herramienta de productividad.
+    </div>
+
 </section>
 
 <section>
@@ -215,7 +226,7 @@
         <div class='tableauPlaceholder' id='viz1777127808902' style='position: relative'><noscript><a href='#'><img alt='Sheet 6 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;pr&#47;productividad_17771277971080&#47;Sheet6&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='productividad_17771277971080&#47;Sheet6' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;pr&#47;productividad_17771277971080&#47;Sheet6&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='es-ES' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1777127808902');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
     </div>
     <div class="insight">
-    💡 Instagram consume más tiempo que todas las apps productivas combinadas.
+        Lo que medimos no solo describe nuestros hábitos, sino que también nos permite transformarlos.
     </div>
     
 </section>
