@@ -121,6 +121,15 @@
             font-size: 0.9rem;
             border-top: 1px solid var(--border);
         }
+        .insight {
+            background: #111827;
+            color: white;
+            padding: 1.2rem;
+            border-radius: 10px;
+            margin-top: 1.5rem;
+            font-weight: 500;
+        }
+
     </style>
 </head>
 <body>
@@ -135,17 +144,19 @@
 <main class="container">
 
 <section>
-    <h2>Introducción</h2>
+    <h2>¿Cómo se distribuye mi tiempo digital?</h2>
     <p class="description">
-        Esta sección presenta los prototipos de visualización desarrollados para el proyecto. El objetivo es analizar y comunicar de forma estructurada cómo se distribuye mi tiempo entre los diferentes dispositivos y categorías de uso diario.
+    Este análisis explora cómo se reparte mi uso de dispositivos y aplicaciones en la vida cotidiana. A través de distintas visualizaciones, se busca identificar patrones de comportamiento, detectar desequilibrios y reflexionar sobre el uso del tiempo en entornos digitales.
     </p>
+
 </section>
 
 <section>
-    <h2>Por Categoría y por Dispositivo</h2>
+    <h2>¿Qué rol cumple cada dispositivo en mi rutina?</h2>
     <p class="description">
-        En este gráfico se observa la especialización de cada plataforma. Cada dispositivo cumple una función predominante y distinta dentro de mi rutina.
+    Cada dispositivo muestra un patrón de uso distinto, lo que evidencia una especialización funcional en mi ecosistema digital.
     </p>
+
     
     <div class="viz-container">
         <div class="svg-container">
@@ -158,37 +169,54 @@
         </div>
     </div>
     <p class="analysis-text">
-        El <strong>celular</strong> registra el mayor volumen de uso, vinculado principalmente a redes sociales. Por otro lado, la <strong>computadora</strong> se consolida como la herramienta central para tareas de programación, mientras que el <strong>iPad</strong> se utiliza mayoritariamente para el consumo de contenidos educativos y académicos.
+    El <strong>celular</strong> concentra el mayor volumen de uso y está fuertemente asociado a actividades de consumo rápido como redes sociales. En contraste, la <strong>computadora</strong> se posiciona como la principal herramienta productiva, mientras que el <strong>iPad</strong> ocupa un rol intermedio, orientado al aprendizaje y consumo de contenido educativo. Esta distribución sugiere una clara segmentación entre ocio y productividad según el dispositivo utilizado.
     </p>
+
 </section>
 
 <section>
-    <h2>A Través de los Días</h2>
+    <h2>¿Cómo cambia mi comportamiento a lo largo de la semana?</h2>
     <p class="description">
-        Esta visualización permite observar cómo varían mis prioridades y el tipo de contenido consumido en el transcurso de los días.
+    Esta visualización permite observar cómo varían mis prioridades y el tipo de contenido consumido en el transcurso de los días.
     </p>
+
     
     <div class="note">
         <strong>Nota:</strong> Se considera el tiempo combinado de los tres dispositivos para obtener una visión integral del comportamiento digital diario.
     </div>
     <div class="flourish-embed flourish-chart" data-src="visualisation/28317234"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/28317234/thumbnail" width="100%" alt="visualization" /></noscript></div>
+
+    <div class="insight">
+        Este cambio evidencia cómo el uso del tiempo en dispositivos no es aleatorio, sino que responde directamente a las prioridades y exigencias del contexto.
+    </div>
 </section>
 
 <section>
-    <h2>Comparaciones entre dispositivos</h2>
+    <h2>¿Qué diferencias existen entre mis dispositivos?</h2>
     <p class="description">
-        Se presentan comparaciones directas entre dispositivos para entender mejor las diferencias de uso y la transición entre las actividades personales y las académicas.
+    Se presentan comparaciones directas entre dispositivos para entender mejor las diferencias de uso y la transición entre las actividades personales y las académicas.
     </p>
+
 
     <div class="viz-container">
         <div style="min-height:368px" id="datawrapper-vis-nIwbd"><script type="text/javascript" defer src="https://datawrapper.dwcdn.net/nIwbd/embed.js" charset="utf-8" data-target="#datawrapper-vis-nIwbd"></script><noscript><img src="https://datawrapper.dwcdn.net/nIwbd/full.png" alt="Stacked Bars" /></noscript></div>
     </div>
 
 </section>
-    <div class="viz-container">
-        <div class='tableauPlaceholder' id='viz1777126429433' style='position: relative'><noscript><a href='#'><img alt='En qué se fue el tiempo?Análisis de productividad vs distracción(Top 20 aplicaciones) ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;pr&#47;productividad_17771261188450&#47;Sheet6&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='productividad_17771261188450&#47;Sheet6' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;pr&#47;productividad_17771261188450&#47;Sheet6&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='es-ES' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1777126429433');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-    </div>
+
 <section>
+    <h2>¿En qué se fue realmente mi tiempo?</h2>
+    <p class="description">
+    Esta visualización destaca las aplicaciones con mayor impacto en el uso total del tiempo, diferenciando entre actividades productivas y distractoras.
+    </p>
+
+
+    <div class="viz-container">
+        <div class='tableauPlaceholder' id='viz1777127808902' style='position: relative'><noscript><a href='#'><img alt='Sheet 6 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;pr&#47;productividad_17771277971080&#47;Sheet6&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='productividad_17771277971080&#47;Sheet6' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;pr&#47;productividad_17771277971080&#47;Sheet6&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='es-ES' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1777127808902');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+    </div>
+    <div class="insight">
+    💡 Instagram consume más tiempo que todas las apps productivas combinadas.
+    </div>
     
 </section>
 
